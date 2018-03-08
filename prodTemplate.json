@@ -1,0 +1,40 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "variables": {
+        "vnetName": {                    
+            "value": "AD003SharedService-NorthEurope-Prod-Vnet"            
+        },
+        "peeringTemplateUri":{
+            "value": "https://code.siemens.com/DEC/SharedServices/AzureAD003DomainJoin/raw/master/Peerings/peeringtemplate.json"
+        }
+    },
+    "resources": [       
+        {
+            "apiVersion": "2017-05-10",
+            "name": "peeringTemplate",
+            "type": "Microsoft.Resources/deployments",
+            "properties": {
+                "mode": "Incremental",
+                "template": {                    
+                    "uri": "[variables('peeringTemplateUri')]",
+                    "contentVersion": "1.0.0.0"
+                 },
+                "parameters":{ 
+                    "vnetName": {
+                        "value": "[variables('vnetName')]"
+                    },
+                    "vnetPeeringName": {
+                        "value": "AD003-Customer130100-Peering"
+                    },
+                    "vnetPeeringID": { 
+                        "value": "/subscriptions/d5a05e43-54d3-4238-a819-652365eee95b/resourceGroups/Rui-AD003-Customer-RG/providers/Microsoft.Network/virtualNetworks/RuiCustomer10_130_100Vnet"
+                    },
+                    "vnetPeeringAddressRange": {
+                        "value": "10.130.100.0/24"
+                    }
+                }
+            }            
+        }
+    ]
+}
