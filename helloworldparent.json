@@ -16,20 +16,20 @@
                 "templateLink": {
                     "uri": "[uri(deployment().properties.templateLink.uri, 'helloworld.json')]",
                     "contentVersion": "1.0.0.0"
-                }
-            },
-            "parameters":{ 
-                "vnetName": {
-                    "value": "[variables('vnetName')]"
                 },
-                "vnetPeeringName": {
-                    "value": "AD003-Customer130100-Peering"
-                },
-                "vnetPeeringID": { 
-                    "value": "/subscriptions/d5a05e43-54d3-4238-a819-652365eee95b/resourceGroups/Rui-AD003-Customer-RG/providers/Microsoft.Network/virtualNetworks/RuiCustomer10_130_100Vnet"
-                },
-                "vnetPeeringAddressRange": {
-                    "value": "10.130.100.0/24"
+                "parameters":{ 
+                    "vnetName": {
+                        "value": "[variables('vnetName')]"
+                    },
+                    "vnetPeeringName": {
+                        "value": "AD003-Customer130100-Peering"
+                    },
+                    "vnetPeeringID": { 
+                        "value": "/subscriptions/d5a05e43-54d3-4238-a819-652365eee95b/resourceGroups/Rui-AD003-Customer-RG/providers/Microsoft.Network/virtualNetworks/RuiCustomer10_130_100Vnet"
+                    },
+                    "vnetPeeringAddressRange": {
+                        "value": "10.130.100.0/24"
+                    }
                 }
             }
         }
