@@ -1,44 +1,14 @@
 {
-    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
-    "contentVersion": "1.0.0.0",
-    "parameters": {
-        "vnetName": {            
-            "type": "String"
-        },
-        "vnetPeeringName": {            
-            "type": "String"
-        },
-        "vnetPeeringID": {            
-            "type": "String"
-        },
-        "vnetPeeringAddressRange": {            
-            "type": "String"
-        }
-    },
-    "variables": {},
-    "resources": [
-        {
-            "type": "Microsoft.Network/virtualNetworks/virtualNetworkPeerings",
-            "name": "[concat(parameters('vnetName'), '/', parameters('vnetPeeringName'))]",
-            "apiVersion": "2015-01-01",
-            "scale": null,
-            "properties": {
-                "remoteVirtualNetwork": {
-                    "id": "[parameters('vnetPeeringID')]"
-                },
-                "allowVirtualNetworkAccess": true,
-                "allowForwardedTraffic": true,
-                "allowGatewayTransit": true,
-                "useRemoteGateways": false,
-                "remoteAddressSpace": {
-                    "addressPrefixes": [
-                        "[parameters('vnetPeeringAddressRange')]"
-                    ]
-                }
-            },
-            "dependsOn": [
-                "[resourceId('Microsoft.Network/virtualNetworks', parameters('vnetName'))]"
-            ]
-        }
-    ]
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {},
+	"variables": {},
+	"resources": [],
+	"outputs": {
+		"greetingMessage": {
+			"value": "Hello World",
+			"type" : "string"
+		}
+	}
 }
+
