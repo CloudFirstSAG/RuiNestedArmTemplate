@@ -4,17 +4,7 @@
 	"parameters": {
         "vnetName": {            
             "type": "String"
-        },
-        "vnetPeeringName": {            
-            "type": "String"
-        },
-        "vnetPeeringID": {            
-            "type": "String"
-        },
-        "vnetPeeringAddressRange": {            
-            "type": "String"
-        }
-    },
+    	},
 	"variables": {},
 	"resources": [],
 	"outputs": {
