@@ -4,9 +4,6 @@
     "variables": {
         "vnetName": {                    
             "value": "AD003SharedService-NorthEurope-Prod-Vnet"            
-        },
-        "peeringTemplateUri":{
-            "value": "https://code.siemens.com/DEC/SharedServices/AzureAD003DomainJoin/raw/master/Peerings/peeringtemplate.json"
         }
     },
     "resources": [       
