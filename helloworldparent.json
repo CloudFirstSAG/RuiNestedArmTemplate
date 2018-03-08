@@ -14,11 +14,7 @@
                     "uri": "[uri(deployment().properties.templateLink.uri, 'helloworld.json')]",
                     "contentVersion": "1.0.0.0"
                 },
-                "parameters":{ 
-                    "vnetName": {
-                        "value": "AD003SharedService-NorthEurope-Prod-Vnet"
-                     }
-                }
+             
             }
         }
     ],
