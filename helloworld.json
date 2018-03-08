@@ -1,7 +1,20 @@
 {
 	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
 	"contentVersion": "1.0.0.0",
-	"parameters": {},
+	"parameters": {
+        "vnetName": {            
+            "type": "String"
+        },
+        "vnetPeeringName": {            
+            "type": "String"
+        },
+        "vnetPeeringID": {            
+            "type": "String"
+        },
+        "vnetPeeringAddressRange": {            
+            "type": "String"
+        }
+    },
 	"variables": {},
 	"resources": [],
 	"outputs": {
