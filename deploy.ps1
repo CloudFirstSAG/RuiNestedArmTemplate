@@ -37,7 +37,7 @@ param(
     #[Parameter(Mandatory=$True)]
     [string]
     #$templateFilePath="https://code.siemens.com/DEC/SharedServices/AzureAD003DomainJoin/raw/master/Peerings/prodTemplate.json"
-    $templateFilePath="https://code.siemens.com/DEC/SharedServices/AzureAD003DomainJoin/raw/master/Peerings/helloworldparent.json"
+    $templateFilePath="https://raw.githubusercontent.com/CloudFirstSAG/RuiNestedArmTemplate/master/prodTemplate.json"
 )
 
 <#
@@ -76,8 +76,7 @@ if($resourceProviders.length) {
     }
 }
 
-   # $templateFilePath="https://code.siemens.com/DEC/SharedServices/AzureAD003DomainJoin/raw/master/Peerings/helloworldparent.json"
-    $templateFilePath = "https://raw.githubusercontent.com/Azure/azure-docs-json-samples/master/azure-resource-manager/linkedtemplates/helloworldparent.json"
+  
 # Start the deployment
 Write-Host "Starting deployment...";
 if($deployType = "New") {

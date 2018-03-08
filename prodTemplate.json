@@ -17,7 +17,7 @@
             "properties": {
                 "mode": "Incremental",
                 "template": {                    
-                    "uri": "[variables('peeringTemplateUri')]",
+                    "uri": "[uri(deployment().properties.templateLink.uri, 'peeringTemplate.json')]",
                     "contentVersion": "1.0.0.0"
                  },
                 "parameters":{ 
